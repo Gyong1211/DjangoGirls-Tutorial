@@ -5,9 +5,34 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>My First Django Project!</title>
 </head>
 <body>
-    <h1>Post List</h1>
+    <div>
+        <h1><a href="#">Hello World!</a></h1>
+        <h3>{{ title }}</h3>
+        </div>
+    {% for post in posts %}
+
+    <div>
+        <p style="color:skyblue">{{ post.title }}</p>
+        <p style="color:pink">{{ post.created_date }}</p>
+        <p style="color:pink">{{ post.text }}</p>
+        <p style="color:pink">{{ post.published_date }}</p>
+
+    </div>
+    <br>
+    {% endfor %}
+
+
+    <div>
+        <p>My first django post (2017/05/29)</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, velit.</p>
+    </div>
+    <div>
+        <p>My second django post (2017/05/29)</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, velit.</p>
+    </div>
+
 </body>
 </html>
