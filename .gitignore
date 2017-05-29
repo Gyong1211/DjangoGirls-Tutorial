@@ -1,6 +1,6 @@
 # Created by https://www.gitignore.io/api/macos,django,python,pycharm
 ### Custom ###
-.dea/
+.idea/
 *.swp
 
 
