@@ -13,7 +13,7 @@
 <body>
 <div class="container">
     <div class="header">
-        <h1><a href="#">Hello World!</a></h1>
+        <h1><a href="{% url 'post_list' %}">Hello World!</a></h1>
         <h4>{{ title }}</h4>
     </div>
     {% block content %}

@@ -20,3 +20,9 @@ def post_detail(request, pk):
         'post':post,
     }
     return render(request, 'blog/post_detail.html',context=context)
+
+def post_create(request):
+    # post=Post.objects.
+    context = {
+    }
+    return render(request, 'blog/post_create.html',context=context)

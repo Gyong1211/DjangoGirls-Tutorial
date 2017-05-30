@@ -1,0 +1,21 @@
+<!--blog/base.html을 확장하여-->
+<!--제목(Input type text)-->
+<!--내용 (textarea)-->
+<!--작성버튼 (button)-->
+<!--을 갖는 html을 완성-->
+
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="post-create-wrap">
+    <div class="post-create">
+        <form action="" method="POST">
+            <label for="post-title-input">Title</label>
+            <input type="text" id="post-title-input">
+            <textarea rows="5" cols="30" name="contents"></textarea>
+            <button type="submit">작성</button>
+        </form>
+
+    </div>
+
+</div>
+{% endblock %}
