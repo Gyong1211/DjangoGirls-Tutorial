@@ -6,10 +6,11 @@
 
 {% extends 'blog/base.html' %}
 {% block content %}
-<a href="{% url 'post_list' %}" class="btn btn-primary pull-right">Return to List</a>
-<div class="post-create-wrap">
-    <div class="post-create">
-        <form action="/post/create/" method="POST">
+<a href="{% url 'post_list' %}" class="btn btn-primary pull-right">List</a>
+<a href="{% url 'post_detail' pk=post.id %}" class="btn btn-primary pull-right">Back</a>
+<div class="post-modify-wrap">
+    <div class="post-modify">
+        <form action="" method="POST">
             {% csrf_token %}
             {% for field in form %}
             <div class="form-group">
@@ -17,10 +18,8 @@
                 {{field}}
             </div>
             {% endfor %}
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Modify</button>
         </form>
-
     </div>
-
 </div>
 {% endblock %}

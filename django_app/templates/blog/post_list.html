@@ -1,8 +1,11 @@
 {% extends 'blog/base.html' %}
 {% block content %}
+<a href="{% url 'post_create' %}" class="btn btn-primary pull-right">Add Post</a>
 <div class="post-list">
     {% for post in posts %}
     <div class="post">
+        <a href="{% url 'post_delete' pk=post.id %}" class="btn btn-danger pull-right">Delete</a>
+        <a href="{% url 'post_modify' pk=post.id %}" class="btn btn-primary pull-right">Modify</a>
         <h4><a href="{% url 'post_detail' pk=post.id %}">{{ post.title }}</a></h4>
         <p class="text-right">{{ post.published_date }}</p>
         <p>{{ post.text|truncatechars:100 }}</p>

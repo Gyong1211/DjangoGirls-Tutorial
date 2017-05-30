@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<a href="{% url 'post_list' %}" class="btn btn-primary pull-right">List</a>
+
+<div class="post-delete-wrap">
+    <div class="post-delete">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger btn-lg btn-block">Delete</button>
+            <a href="{% url 'post_detail' pk=post.id %}" class="btn btn-primary btn-block">Sorry! Don't delete it!</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

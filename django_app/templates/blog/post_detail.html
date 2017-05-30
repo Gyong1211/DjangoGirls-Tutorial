@@ -2,6 +2,9 @@
 {% block content %}
 <div class="post-list">
     <div class="post">
+        <a href="{% url 'post_delete' pk=post.id %}" class="btn btn-danger pull-right">Delete</a>
+        <a href="{% url 'post_list' %}" class="btn btn-primary pull-right">List</a>
+        <a href="{% url 'post_modify' pk=post.id %}" class="btn btn-primary pull-right">Modify</a>
         <h4><a href="#">{{ post.title }}</a></h4>
         <p class="text-right">{{ post.published_date }}</p>
         <p>{{ post.text|linebreaksbr}}</p>
