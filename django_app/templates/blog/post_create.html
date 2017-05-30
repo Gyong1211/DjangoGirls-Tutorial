@@ -8,10 +8,10 @@
 {% block content %}
 <div class="post-create-wrap">
     <div class="post-create">
-        <form action="" method="POST">
-            <label for="post-title-input">Title</label>
-            <input type="text" id="post-title-input">
-            <textarea rows="5" cols="30" name="contents"></textarea>
+        <form action="/post/create/" method="POST">
+            {% csrf_token %}
+            <input name="title" type="text">
+            <textarea name="text" rows="5" cols="30" name="contents"></textarea>
             <button type="submit">작성</button>
         </form>
 
