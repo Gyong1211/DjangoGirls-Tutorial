@@ -17,13 +17,11 @@
         <h4>{{ title }}</h4>
         </div>
     <div class="post-list">
-        {% for post in posts %}
         <div class="post">
             <h4><a href="#">{{ post.title }}</a></h4>
             <p class="text-right">{{ post.published_date }}</p>
-            <p>{{ post.text|truncatechars:100 }}</p>
+            <p>{{ post.text|bl }}</p>
         </div>
-        {% endfor %}
     </div>
 </div>
 </body>
